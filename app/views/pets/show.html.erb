@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Petname:</b>
+  <%= @pet.petname %>
+</p>
+
+<p>
+  <b>Animal:</b>
+  <%= @pet.animal %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= image_tag(@pet.description_url, :width => 600) if @pet.description.present? %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @pet.dob %>
+</p>
+
+<p>
+  <b>Ownername:</b>
+  <%= @pet.ownername %>
+</p>
+
+<p>
+  <b>Owneremail:</b>
+  <%= @pet.owneremail %>
+</p>
+
+<p>
+  <b>Petid:</b>
+  <%= @pet.petid %>
+</p>
+
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
